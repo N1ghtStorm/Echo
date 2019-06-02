@@ -1,0 +1,11 @@
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\bin\Debug\Echo.exe.config
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\bin\Debug\Echo.exe
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\bin\Debug\Echo.pdb
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.Properties.Resources.resources
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.csproj.GenerateResource.Cache
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.exe
+c:\users\work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.pdb
+C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.csprojResolveAssemblyReference.cache
+C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.MainForm.resources
+C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.Form1.resources
+C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.StyleForm.resources
