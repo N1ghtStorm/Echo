@@ -9,3 +9,15 @@ C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.csp
 C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.MainForm.resources
 C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.Form1.resources
 C:\Users\Work\documents\visual studio 2017\Projects\Echo\Echo\obj\Debug\Echo.StyleForm.resources
+S:\Echo_project\Echo\Echo\bin\Debug\Echo.exe.config
+S:\Echo_project\Echo\Echo\bin\Debug\Echo.exe
+S:\Echo_project\Echo\Echo\bin\Debug\Echo.pdb
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.csprojResolveAssemblyReference.cache
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.Form1.resources
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.MainForm.resources
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.PatientCardForm.resources
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.Properties.Resources.resources
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.StyleForm.resources
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.csproj.GenerateResource.Cache
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.exe
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.pdb
