@@ -21,12 +21,5 @@ namespace Echo
         {
 
         }
-
-        private void NameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
