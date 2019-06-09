@@ -244,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(103)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(740, 482);
+            this.ClientSize = new System.Drawing.Size(608, 482);
             this.Controls.Add(this.RhythmTextBox);
             this.Controls.Add(this.labelRhythm);
             this.Controls.Add(this.MassTextBox);

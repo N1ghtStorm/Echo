@@ -31,6 +31,7 @@
             this.MainFormHeaderPanel = new System.Windows.Forms.Panel();
             this.MainFormCloseButton = new System.Windows.Forms.Button();
             this.InsideFormPanel = new System.Windows.Forms.Panel();
+            this.PatientButton = new System.Windows.Forms.Button();
             this.MainFormHeaderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,10 +58,21 @@
             // InsideFormPanel
             // 
             this.InsideFormPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.InsideFormPanel.Location = new System.Drawing.Point(2, 30);
+            this.InsideFormPanel.Location = new System.Drawing.Point(154, 30);
             this.InsideFormPanel.Name = "InsideFormPanel";
-            this.InsideFormPanel.Size = new System.Drawing.Size(922, 522);
+            this.InsideFormPanel.Size = new System.Drawing.Size(770, 522);
             this.InsideFormPanel.TabIndex = 1;
+            // 
+            // PatientButton
+            // 
+            this.PatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PatientButton.Location = new System.Drawing.Point(2, 30);
+            this.PatientButton.Name = "PatientButton";
+            this.PatientButton.Size = new System.Drawing.Size(154, 109);
+            this.PatientButton.TabIndex = 2;
+            this.PatientButton.Text = "Данные Пациента";
+            this.PatientButton.UseVisualStyleBackColor = true;
+            this.PatientButton.Click += new System.EventHandler(this.PatientButton_Click);
             // 
             // MainForm
             // 
@@ -68,6 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(103)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(927, 554);
+            this.Controls.Add(this.PatientButton);
             this.Controls.Add(this.InsideFormPanel);
             this.Controls.Add(this.MainFormHeaderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -84,5 +97,6 @@
         private System.Windows.Forms.Panel MainFormHeaderPanel;
         private System.Windows.Forms.Button MainFormCloseButton;
         private System.Windows.Forms.Panel InsideFormPanel;
+        private System.Windows.Forms.Button PatientButton;
     }
 }

@@ -17,6 +17,8 @@ namespace Echo
     {
         private Point mouseLocation;
 
+        public Form InsideForm { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -46,6 +48,16 @@ namespace Echo
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void PatientButton_Click(object sender, EventArgs e)
+        {
+            PatientCardForm patientcardform = new PatientCardForm();
+            InsideForm = patientcardform;
+            InsideForm.TopLevel = false;
+            InsideFormPanel.Controls.Add(InsideForm);
+            InsideForm.Size = InsideFormPanel.Size;
+            InsideForm.Show();
         }
     }
 }
