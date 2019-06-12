@@ -37,6 +37,7 @@
             // 
             // MainFormHeaderPanel
             // 
+            this.MainFormHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.MainFormHeaderPanel.Controls.Add(this.MainFormCloseButton);
             this.MainFormHeaderPanel.Location = new System.Drawing.Point(2, 2);
             this.MainFormHeaderPanel.Name = "MainFormHeaderPanel";

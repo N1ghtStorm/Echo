@@ -52,12 +52,24 @@ namespace Echo
 
         private void PatientButton_Click(object sender, EventArgs e)
         {
-            PatientCardForm patientcardform = new PatientCardForm();
-            InsideForm = patientcardform;
+            //PatientCardForm patientcardform = new PatientCardForm();
+            var patientWayDialogForm = new PatientWayDialogForm();
+            var patientCardForm = new PatientCardForm();
+
+            //patientCardForm.MainPanel = InsideFormPanel;
+            patientCardForm.PatientWay = InsideForm;
+
+            InsideForm = patientWayDialogForm;
             InsideForm.TopLevel = false;
+            //InsideForm.BackColor = Color.Blue;
+            patientWayDialogForm.MainPanel = InsideFormPanel;
             InsideFormPanel.Controls.Add(InsideForm);
             InsideForm.Size = InsideFormPanel.Size;
             InsideForm.Show();
+           // PatientButton.Active
+
+
+            //if (InsideForm.CreateNewPatientButton.IsPressed)
         }
     }
 }
