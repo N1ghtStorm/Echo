@@ -35,6 +35,7 @@ namespace Echo
             InsideForm.Show();
             patientCardForm.MainPanel = this.MainPanel;
             this.Dispose();
+            //this.Dispose();
             
         }
 

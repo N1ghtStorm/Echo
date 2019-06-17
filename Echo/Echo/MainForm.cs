@@ -9,24 +9,40 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Echo
-{   
-/// <summary>
-/// Главная Форма Проекта
-/// </summary>
+{
+    /// <summary>
+    /// Главная Форма Проекта
+    /// </summary>
     public partial class MainForm : Form
     {
         private Point mouseLocation;
+
+
+
+        private Button[] buttons = new Button[2];
+
+        private Color readyButtonColor;
+        private Color pressedButtonColor;
 
         public Form InsideForm { get; set; }
 
         public MainForm()
         {
             InitializeComponent();
+
+            readyButtonColor = Color.FromArgb(115, 126, 127);
+            pressedButtonColor = Color.FromArgb(0, 122, 199);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MainFormHeaderPanel.Location = new Point(0,0);
+            MainFormHeaderPanel.Location = new Point(0, 0);
+
+            buttons[0] = DoctorButton;
+            buttons[1] = PatientButton;
+
+            // isPressedButtons[0] = isDoctorButtonPressed = false;
+            // isPressedButtons[1] = isPatientButtonPressed = false;
         }
 
         private void MainFormCloseButton_Click(object sender, EventArgs e)
@@ -50,8 +66,37 @@ namespace Echo
             }
         }
 
+        private void DoctorButton_Click(object sender, EventArgs e)
+        {
+            InsideFormPanel.Controls.Clear();
+            //InsideFormPanel.Controls.Clear();
+            var doctorCardForm = new DoctorCardForm();
+            InsideForm = doctorCardForm;
+            InsideForm.Size = InsideFormPanel.Size;
+            InsideForm.TopLevel = false;
+            InsideFormPanel.Controls.Add(InsideForm);
+            InsideForm.Show();
+
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (buttons[i] != sender)
+                {
+                    buttons[i].Enabled = true;
+                    buttons[i].BackColor = readyButtonColor;
+                }
+                else
+                {
+                    buttons[i].Enabled = false;
+                    buttons[i].BackColor = pressedButtonColor;
+                }
+            }
+
+        }
+
         private void PatientButton_Click(object sender, EventArgs e)
         {
+
+            InsideFormPanel.Controls.Clear();
             //PatientCardForm patientcardform = new PatientCardForm();
             var patientWayDialogForm = new PatientWayDialogForm();
             var patientCardForm = new PatientCardForm();
@@ -66,10 +111,29 @@ namespace Echo
             InsideFormPanel.Controls.Add(InsideForm);
             InsideForm.Size = InsideFormPanel.Size;
             InsideForm.Show();
-           // PatientButton.Active
+            // PatientButton.Active
 
+            // PatientButton.Enabled = false;
+            // PatientButton.BackColor = Color.FromArgb(0, 122, 199);
 
             //if (InsideForm.CreateNewPatientButton.IsPressed)
+
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (buttons[i] != sender)
+                {
+                    buttons[i].Enabled = true;
+                    buttons[i].BackColor = readyButtonColor;
+                }
+                else
+                {
+                    buttons[i].Enabled = false;
+                    buttons[i].BackColor = pressedButtonColor;
+                }
+            }
+
         }
+
+
     }
 }

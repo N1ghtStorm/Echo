@@ -22,3 +22,5 @@ S:\Echo_project\Echo\Echo\obj\Debug\Echo.exe
 S:\Echo_project\Echo\Echo\obj\Debug\Echo.pdb
 S:\Echo_project\Echo\Echo\obj\Debug\Echo.PatientWayDialogForm.resources
 S:\Echo_project\Echo\Echo\obj\Debug\Echo.csprojResolveAssemblyReference.cache
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorCardForm.resources
+S:\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorWayDialogForm.resources

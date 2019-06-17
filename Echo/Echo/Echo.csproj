@@ -51,6 +51,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Doctor.cs" />
+    <Compile Include="DoctorCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorCardForm.Designer.cs">
+      <DependentUpon>DoctorCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorWayDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorWayDialogForm.Designer.cs">
+      <DependentUpon>DoctorWayDialogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     <Compile Include="StyleForm.Designer.cs">
       <DependentUpon>StyleForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DoctorCardForm.resx">
+      <DependentUpon>DoctorCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorWayDialogForm.resx">
+      <DependentUpon>DoctorWayDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
