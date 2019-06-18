@@ -36,6 +36,9 @@ namespace Echo
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            MainFormCloseButton.TabStop = false;
+            MainFormCloseButton.FlatStyle = FlatStyle.Flat;
+            MainFormCloseButton.FlatAppearance.BorderSize = 0;
             MainFormHeaderPanel.Location = new Point(0, 0);
 
             buttons[0] = DoctorButton;
@@ -134,6 +137,11 @@ namespace Echo
 
         }
 
-
+        private void MainFormCloseButton_Paint(object sender, PaintEventArgs e)
+        {
+            Pen pen = new Pen(Color.White);
+            e.Graphics.DrawLine(pen, 5, 5, MainFormCloseButton.Width - 5, MainFormCloseButton.Height - 5);
+            e.Graphics.DrawLine(pen, MainFormCloseButton.Width - 5, 5, 5, MainFormCloseButton.Height - 5);
+        }
     }
 }

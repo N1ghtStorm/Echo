@@ -52,10 +52,11 @@
             this.MainFormCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainFormCloseButton.Location = new System.Drawing.Point(897, 3);
             this.MainFormCloseButton.Name = "MainFormCloseButton";
-            this.MainFormCloseButton.Size = new System.Drawing.Size(25, 23);
+            this.MainFormCloseButton.Size = new System.Drawing.Size(25, 25);
             this.MainFormCloseButton.TabIndex = 0;
             this.MainFormCloseButton.UseVisualStyleBackColor = true;
             this.MainFormCloseButton.Click += new System.EventHandler(this.MainFormCloseButton_Click);
+            this.MainFormCloseButton.Paint += new System.Windows.Forms.PaintEventHandler(this.MainFormCloseButton_Paint);
             // 
             // InsideFormPanel
             // 
