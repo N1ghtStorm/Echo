@@ -16,6 +16,6 @@ namespace Echo
 
         //Некоторые возможные
         public String DoctorProfession { get; set; }
-        public String ClinicName {get; set;}
+        public String ClinicName { get; set;}
     }
 }

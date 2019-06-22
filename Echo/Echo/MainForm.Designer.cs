@@ -69,7 +69,7 @@
             // PatientButton
             // 
             this.PatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PatientButton.Location = new System.Drawing.Point(2, 157);
+            this.PatientButton.Location = new System.Drawing.Point(2, 145);
             this.PatientButton.Name = "PatientButton";
             this.PatientButton.Size = new System.Drawing.Size(154, 109);
             this.PatientButton.TabIndex = 2;
@@ -80,7 +80,7 @@
             // DoctorButton
             // 
             this.DoctorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DoctorButton.Location = new System.Drawing.Point(2, 42);
+            this.DoctorButton.Location = new System.Drawing.Point(2, 30);
             this.DoctorButton.Name = "DoctorButton";
             this.DoctorButton.Size = new System.Drawing.Size(154, 109);
             this.DoctorButton.TabIndex = 3;

@@ -16,11 +16,7 @@ namespace Echo
     public partial class MainForm : Form
     {
         private Point mouseLocation;
-
-
-
         private Button[] buttons = new Button[2];
-
         private Color readyButtonColor;
         private Color pressedButtonColor;
 

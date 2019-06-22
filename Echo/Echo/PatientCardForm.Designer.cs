@@ -34,8 +34,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelSecondNmae = new System.Windows.Forms.Label();
             this.labelFatherName = new System.Windows.Forms.Label();
-            this.numericBirthDay = new System.Windows.Forms.NumericUpDown();
-            this.numericBirthMounth = new System.Windows.Forms.NumericUpDown();
             this.numericBirthYear = new System.Windows.Forms.NumericUpDown();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.labelGrowth = new System.Windows.Forms.Label();
@@ -45,8 +43,13 @@
             this.labelRhythm = new System.Windows.Forms.Label();
             this.RhythmTextBox = new System.Windows.Forms.TextBox();
             this.BackButton = new Echo.StyleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.numericBirthDay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericBirthMounth)).BeginInit();
+            this.comboDay = new System.Windows.Forms.ComboBox();
+            this.comboMounth = new System.Windows.Forms.ComboBox();
+            this.labelDay = new System.Windows.Forms.Label();
+            this.labelMounth = new System.Windows.Forms.Label();
+            this.labelYear = new System.Windows.Forms.Label();
+            this.styleButton1 = new Echo.StyleButton();
+            this.labelAge = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericBirthYear)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +84,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelName.Location = new System.Drawing.Point(21, 86);
+            this.labelName.Location = new System.Drawing.Point(40, 82);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(80, 13);
             this.labelName.TabIndex = 3;
@@ -91,7 +94,7 @@
             // 
             this.labelSecondNmae.AutoSize = true;
             this.labelSecondNmae.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSecondNmae.Location = new System.Drawing.Point(40, 122);
+            this.labelSecondNmae.Location = new System.Drawing.Point(61, 122);
             this.labelSecondNmae.Name = "labelSecondNmae";
             this.labelSecondNmae.Size = new System.Drawing.Size(56, 13);
             this.labelSecondNmae.TabIndex = 4;
@@ -101,59 +104,15 @@
             // 
             this.labelFatherName.AutoSize = true;
             this.labelFatherName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFatherName.Location = new System.Drawing.Point(34, 164);
+            this.labelFatherName.Location = new System.Drawing.Point(61, 164);
             this.labelFatherName.Name = "labelFatherName";
             this.labelFatherName.Size = new System.Drawing.Size(54, 13);
             this.labelFatherName.TabIndex = 5;
             this.labelFatherName.Text = "Отчество";
             // 
-            // numericBirthDay
-            // 
-            this.numericBirthDay.Location = new System.Drawing.Point(136, 203);
-            this.numericBirthDay.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.numericBirthDay.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericBirthDay.Name = "numericBirthDay";
-            this.numericBirthDay.Size = new System.Drawing.Size(40, 20);
-            this.numericBirthDay.TabIndex = 6;
-            this.numericBirthDay.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numericBirthMounth
-            // 
-            this.numericBirthMounth.Location = new System.Drawing.Point(196, 203);
-            this.numericBirthMounth.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.numericBirthMounth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericBirthMounth.Name = "numericBirthMounth";
-            this.numericBirthMounth.Size = new System.Drawing.Size(40, 20);
-            this.numericBirthMounth.TabIndex = 7;
-            this.numericBirthMounth.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // numericBirthYear
             // 
-            this.numericBirthYear.Location = new System.Drawing.Point(257, 203);
+            this.numericBirthYear.Location = new System.Drawing.Point(369, 203);
             this.numericBirthYear.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -254,12 +213,90 @@
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // comboDay
+            // 
+            this.comboDay.FormattingEnabled = true;
+            this.comboDay.ItemHeight = 13;
+            this.comboDay.Location = new System.Drawing.Point(136, 202);
+            this.comboDay.Name = "comboDay";
+            this.comboDay.Size = new System.Drawing.Size(51, 21);
+            this.comboDay.TabIndex = 17;
+            this.comboDay.SelectedIndexChanged += new System.EventHandler(this.comboDay_SelectedIndexChanged);
+            // 
+            // comboMounth
+            // 
+            this.comboMounth.FormattingEnabled = true;
+            this.comboMounth.Location = new System.Drawing.Point(233, 202);
+            this.comboMounth.Name = "comboMounth";
+            this.comboMounth.Size = new System.Drawing.Size(84, 21);
+            this.comboMounth.TabIndex = 18;
+            this.comboMounth.SelectedIndexChanged += new System.EventHandler(this.comboMounth_SelectedIndexChanged);
+            // 
+            // labelDay
+            // 
+            this.labelDay.AutoSize = true;
+            this.labelDay.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelDay.Location = new System.Drawing.Point(193, 205);
+            this.labelDay.Name = "labelDay";
+            this.labelDay.Size = new System.Drawing.Size(34, 13);
+            this.labelDay.TabIndex = 19;
+            this.labelDay.Text = "День";
+            // 
+            // labelMounth
+            // 
+            this.labelMounth.AutoSize = true;
+            this.labelMounth.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelMounth.Location = new System.Drawing.Point(323, 205);
+            this.labelMounth.Name = "labelMounth";
+            this.labelMounth.Size = new System.Drawing.Size(40, 13);
+            this.labelMounth.TabIndex = 20;
+            this.labelMounth.Text = "Месяц";
+            // 
+            // labelYear
+            // 
+            this.labelYear.AutoSize = true;
+            this.labelYear.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelYear.Location = new System.Drawing.Point(440, 205);
+            this.labelYear.Name = "labelYear";
+            this.labelYear.Size = new System.Drawing.Size(25, 13);
+            this.labelYear.TabIndex = 21;
+            this.labelYear.Text = "Год";
+            // 
+            // styleButton1
+            // 
+            this.styleButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(126)))), ((int)(((byte)(127)))));
+            this.styleButton1.FlatAppearance.BorderSize = 0;
+            this.styleButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.styleButton1.Location = new System.Drawing.Point(425, 405);
+            this.styleButton1.Name = "styleButton1";
+            this.styleButton1.Size = new System.Drawing.Size(153, 43);
+            this.styleButton1.TabIndex = 22;
+            this.styleButton1.TabStop = false;
+            this.styleButton1.Text = "styleButton1";
+            this.styleButton1.UseVisualStyleBackColor = false;
+            // 
+            // labelAge
+            // 
+            this.labelAge.AutoSize = true;
+            this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAge.Location = new System.Drawing.Point(471, 205);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(0, 13);
+            this.labelAge.TabIndex = 23;
+            // 
             // PatientCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(103)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(608, 482);
+            this.Controls.Add(this.labelAge);
+            this.Controls.Add(this.styleButton1);
+            this.Controls.Add(this.labelYear);
+            this.Controls.Add(this.labelMounth);
+            this.Controls.Add(this.labelDay);
+            this.Controls.Add(this.comboMounth);
+            this.Controls.Add(this.comboDay);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.RhythmTextBox);
             this.Controls.Add(this.labelRhythm);
@@ -269,8 +306,6 @@
             this.Controls.Add(this.labelGrowth);
             this.Controls.Add(this.labelBirthDate);
             this.Controls.Add(this.numericBirthYear);
-            this.Controls.Add(this.numericBirthMounth);
-            this.Controls.Add(this.numericBirthDay);
             this.Controls.Add(this.labelFatherName);
             this.Controls.Add(this.labelSecondNmae);
             this.Controls.Add(this.labelName);
@@ -281,8 +316,6 @@
             this.Name = "PatientCardForm";
             this.Text = "PatientCardForm";
             this.Load += new System.EventHandler(this.PatientCardForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericBirthDay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericBirthMounth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericBirthYear)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -297,8 +330,6 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelSecondNmae;
         private System.Windows.Forms.Label labelFatherName;
-        private System.Windows.Forms.NumericUpDown numericBirthDay;
-        private System.Windows.Forms.NumericUpDown numericBirthMounth;
         private System.Windows.Forms.NumericUpDown numericBirthYear;
         private System.Windows.Forms.Label labelBirthDate;
         private System.Windows.Forms.Label labelGrowth;
@@ -308,5 +339,12 @@
         private System.Windows.Forms.Label labelRhythm;
         private System.Windows.Forms.TextBox RhythmTextBox;
         private StyleButton BackButton;
+        private System.Windows.Forms.ComboBox comboDay;
+        private System.Windows.Forms.ComboBox comboMounth;
+        private System.Windows.Forms.Label labelDay;
+        private System.Windows.Forms.Label labelMounth;
+        private System.Windows.Forms.Label labelYear;
+        private StyleButton styleButton1;
+        private System.Windows.Forms.Label labelAge;
     }
 }
