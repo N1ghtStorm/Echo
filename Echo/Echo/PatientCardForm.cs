@@ -14,6 +14,7 @@ namespace Echo
     public partial class PatientCardForm : Form
     {
         private CalculateAge calculateAge;
+        private String phrase;
 
         // Заполняем дни в месяцах
         private int[][] daysMounths = new int[][]
@@ -39,7 +40,6 @@ namespace Echo
 
         public PatientCardForm()
         {
-
             InitializeComponent();
         }
 
@@ -49,12 +49,12 @@ namespace Echo
             {
                 comboMounth.Items.Add(mounths[i]);
             }
+
             calculateAge = new CalculateAge();
             comboDay.Text = "1";
             comboMounth.SelectedIndex = 0;
             comboDay.SelectedIndex = 0;
-            numericBirthYear.Value = 1980;
-            
+            numericBirthYear.Value = 1980;       
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -84,27 +84,80 @@ namespace Echo
             }
 
             comboDay.Items.Clear();
-            
+
             for (int i = 0; i < mounthLength; i++)
             {
                 comboDay.Items.Add(i + 1);
             }
             comboDay.SelectedIndex = Convert.ToInt32(comboDay.Text) - 1;
 
-            var age = calculateAge.GetAge(Convert.ToInt32(comboDay.Text), comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
-            labelAge.Text = comboDay.Text + " " + comboMounth.Text + " " + comboDay.SelectedIndex + " " + comboMounth.SelectedIndex + " " + age;
+            var age = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
+            if ((int)(age.TotalDays / 365) > 4)
+            {
+                phrase = " лет";
+            }
+            else
+            {
+                phrase = " года";
+            }
+
+            if ((int)(age.TotalDays / 365) > 0)
+            {
+                labelAge.Text = "Возраст:" + (int)(age.TotalDays / 365) + phrase;
+                labelAge.ForeColor = Color.White;
+            }
+            else
+            {
+                labelAge.Text = "Введена некорректная дата";
+                labelAge.ForeColor = Color.Red;
+            }
+            
         }
 
         private void comboDay_SelectedIndexChanged(object sender, EventArgs e)
         {
             var age = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
-            labelAge.Text = comboDay.Text + " " + comboMounth.Text + " " + comboDay.SelectedIndex + " " + comboMounth.SelectedIndex + " " + age;
+            if ((int)(age.TotalDays / 365) >= 4)
+            {
+                phrase = " лет";
+            }
+            else
+            {
+                phrase = " года";
+            }
+            if ((int)(age.TotalDays / 365) >= 0)
+            {
+                labelAge.Text = "Возраст:" + (int)(age.TotalDays / 365) + phrase;
+                labelAge.ForeColor = Color.White;
+            }
+            else
+            {
+                labelAge.Text = "Введена некорректная дата";
+                labelAge.ForeColor = Color.Red;
+            }
         }
 
         private void numericBirthYear_ValueChanged(object sender, EventArgs e)
         {           
             var age = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
-            labelAge.Text = comboDay.Text + " " + comboMounth.Text + " " + comboDay.SelectedIndex + " " + comboMounth.SelectedIndex + " " + age;                           
+            if ((int)(age.TotalDays / 365) > 4)
+            {
+                phrase = " лет";
+            }
+            else
+            {
+                phrase = " года";
+            }
+            if ((int)(age.TotalDays / 365) >= 0)
+            {
+                labelAge.Text = "Возраст:" + (int)(age.TotalDays / 365) + phrase;
+                labelAge.ForeColor = Color.White;
+            }
+            else
+            {
+                labelAge.Text = "Введена некорректная дата";
+                labelAge.ForeColor = Color.Red;
+            }
         }
     }
 }
