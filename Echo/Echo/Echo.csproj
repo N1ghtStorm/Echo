@@ -72,16 +72,16 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PatientSpace\Patient.cs" />
-    <Compile Include="PatientCardForm.cs">
+    <Compile Include="PatientSpace\PatientCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientCardForm.Designer.cs">
+    <Compile Include="PatientSpace\PatientCardForm.Designer.cs">
       <DependentUpon>PatientCardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientWayDialogForm.cs">
+    <Compile Include="PatientSpace\PatientWayDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientWayDialogForm.Designer.cs">
+    <Compile Include="PatientSpace\PatientWayDialogForm.Designer.cs">
       <DependentUpon>PatientWayDialogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -104,10 +104,10 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientCardForm.resx">
+    <EmbeddedResource Include="PatientSpace\PatientCardForm.resx">
       <DependentUpon>PatientCardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientWayDialogForm.resx">
+    <EmbeddedResource Include="PatientSpace\PatientWayDialogForm.resx">
       <DependentUpon>PatientWayDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

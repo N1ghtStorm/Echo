@@ -33,17 +33,17 @@ namespace Echo.DataModel
             }
             else if ((int)(ageSpan.TotalDays) > 60)
             {
-                phrase = " месяцев";
+                phrase = " месяцев" + " " + (((int)ageSpan.TotalDays % 30) / 7) + " нед.";
                 age = (int)(ageSpan.TotalDays / 30);
             }
             else if ((int)(ageSpan.TotalDays) >= 30)
             {
-                phrase = " месяц";
-                age = (int)(ageSpan.TotalDays / 30);
+                phrase = " месяц" + " " + (((int)ageSpan.TotalDays % 30) / 7) + " нед.";
+                age = (int)(ageSpan.TotalDays / 30);              
             }
             else if ((int)(ageSpan.TotalDays) < 30 && (int)(ageSpan.TotalDays) >= 0)
             {
-                phrase = " дней/день/дня";
+                phrase = " д.";
                 age = (int)(ageSpan.TotalDays);
             }
             else
@@ -61,8 +61,6 @@ namespace Echo.DataModel
                 label.Text = "Введена некорректная дата";
                 label.ForeColor = Color.FromArgb(145, 3, 27);
             }
-
-            //return "";
         }
     }
 }
