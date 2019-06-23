@@ -50,6 +50,7 @@
     <Compile Include="CustomWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DataModel\CalculateAge.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="DoctorCardForm.cs">
       <SubType>Form</SubType>
@@ -63,19 +64,13 @@
     <Compile Include="DoctorWayDialogForm.Designer.cs">
       <DependentUpon>DoctorWayDialogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient.cs" />
+    <Compile Include="PatientSpace\Patient.cs" />
     <Compile Include="PatientCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +99,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorWayDialogForm.resx">
       <DependentUpon>DoctorWayDialogForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -142,8 +134,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Organs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

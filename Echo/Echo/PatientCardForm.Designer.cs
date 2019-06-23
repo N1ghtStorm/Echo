@@ -131,6 +131,7 @@
             0,
             0,
             0});
+            this.numericBirthYear.ValueChanged += new System.EventHandler(this.numericBirthYear_ValueChanged);
             // 
             // labelBirthDate
             // 

@@ -34,6 +34,5 @@ namespace Echo
             bodyArea = bodyAreaCoefficient * Math.Pow(Mass, 0.425f) * Math.Pow(Growth, 0.725f);
             return bodyArea;
         }
-
     }
 }
