@@ -59,7 +59,7 @@ namespace Echo.DataModel
             else
             {
                 label.Text = "Введена некорректная дата";
-                label.ForeColor = Color.Red;
+                label.ForeColor = Color.FromArgb(145, 3, 27);
             }
 
             //return "";

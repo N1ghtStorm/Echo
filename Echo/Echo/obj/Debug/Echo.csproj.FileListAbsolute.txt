@@ -23,3 +23,17 @@ S:\Echo_project\Echo\Echo\obj\Debug\Echo.PatientWayDialogForm.resources
 S:\Echo_project\Echo\Echo\obj\Debug\Echo.csprojResolveAssemblyReference.cache
 S:\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorCardForm.resources
 S:\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorWayDialogForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\bin\Debug\Echo.exe.config
+S:\Code_projects\Echo_project\Echo\Echo\bin\Debug\Echo.exe
+S:\Code_projects\Echo_project\Echo\Echo\bin\Debug\Echo.pdb
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.csprojResolveAssemblyReference.cache
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorCardForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorWayDialogForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.MainForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.PatientCardForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.PatientWayDialogForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.Properties.Resources.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.StyleForm.resources
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.csproj.GenerateResource.Cache
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.exe
+S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.pdb
