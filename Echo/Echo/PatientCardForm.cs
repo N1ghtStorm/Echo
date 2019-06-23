@@ -14,6 +14,7 @@ namespace Echo
     public partial class PatientCardForm : Form
     {
         private CalculateAge calculateAge;
+        private ReturnAgePhrase returnAgePharse;
         private String phrase;
 
         // Заполняем дни в месяцах
@@ -51,6 +52,8 @@ namespace Echo
             }
 
             calculateAge = new CalculateAge();
+            returnAgePharse = new ReturnAgePhrase();
+
             comboDay.Text = "1";
             comboMounth.SelectedIndex = 0;
             comboDay.SelectedIndex = 0;
@@ -70,6 +73,7 @@ namespace Echo
             this.Dispose();         
         }
 
+        // Смена Месяца
         private void comboMounth_SelectedIndexChanged(object sender, EventArgs e)
         {
             int a = comboDay.SelectedIndex;
@@ -91,73 +95,22 @@ namespace Echo
             }
             comboDay.SelectedIndex = Convert.ToInt32(comboDay.Text) - 1;
 
-            var age = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
-            if ((int)(age.TotalDays / 365) > 4)
-            {
-                phrase = " лет";
-            }
-            else
-            {
-                phrase = " года";
-            }
-
-            if ((int)(age.TotalDays / 365) > 0)
-            {
-                labelAge.Text = "Возраст:" + (int)(age.TotalDays / 365) + phrase;
-                labelAge.ForeColor = Color.White;
-            }
-            else
-            {
-                labelAge.Text = "Введена некорректная дата";
-                labelAge.ForeColor = Color.Red;
-            }
-            
+            var ageSpan = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
+            returnAgePharse.ReturnPhrase(labelAge, ageSpan, comboDay.SelectedIndex, comboMounth.SelectedIndex, numericBirthYear.Value);
         }
 
+        // Смена дня
         private void comboDay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var age = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
-            if ((int)(age.TotalDays / 365) >= 4)
-            {
-                phrase = " лет";
-            }
-            else
-            {
-                phrase = " года";
-            }
-            if ((int)(age.TotalDays / 365) >= 0)
-            {
-                labelAge.Text = "Возраст:" + (int)(age.TotalDays / 365) + phrase;
-                labelAge.ForeColor = Color.White;
-            }
-            else
-            {
-                labelAge.Text = "Введена некорректная дата";
-                labelAge.ForeColor = Color.Red;
-            }
+            var ageSpan = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
+            returnAgePharse.ReturnPhrase(labelAge, ageSpan, comboDay.SelectedIndex, comboMounth.SelectedIndex, numericBirthYear.Value);
         }
 
+        // Смена года
         private void numericBirthYear_ValueChanged(object sender, EventArgs e)
-        {           
-            var age = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
-            if ((int)(age.TotalDays / 365) > 4)
-            {
-                phrase = " лет";
-            }
-            else
-            {
-                phrase = " года";
-            }
-            if ((int)(age.TotalDays / 365) >= 0)
-            {
-                labelAge.Text = "Возраст:" + (int)(age.TotalDays / 365) + phrase;
-                labelAge.ForeColor = Color.White;
-            }
-            else
-            {
-                labelAge.Text = "Введена некорректная дата";
-                labelAge.ForeColor = Color.Red;
-            }
+        {
+            var ageSpan = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
+            returnAgePharse.ReturnPhrase(labelAge, ageSpan, comboDay.SelectedIndex, comboMounth.SelectedIndex, numericBirthYear.Value);
         }
     }
 }
