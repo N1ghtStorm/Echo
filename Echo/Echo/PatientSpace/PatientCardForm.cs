@@ -62,7 +62,7 @@ namespace Echo
             returnAgePharse = new ReturnAgePhrase();
 
             
-            //comboDay.Text = "1";
+            comboDay.Text = "1";
             comboMounth.SelectedIndex = 0;
             comboDay.SelectedIndex = 0;
             numericBirthYear.Value = 1980;       
@@ -95,7 +95,7 @@ namespace Echo
                 comboDay.Text = mounthLength.ToString();
             }
 
-           // comboDay.Items.Clear();
+            comboDay.Items.Clear();
 
             for (int i = 0; i < mounthLength; i++)
             {
@@ -104,7 +104,7 @@ namespace Echo
 
             try
             {
-               // comboDay.SelectedIndex = Convert.ToInt32(comboDay.Text) - 1;
+               comboDay.SelectedIndex = Convert.ToInt32(comboDay.Text) - 1;
             }
             catch(Exception exep)
             {

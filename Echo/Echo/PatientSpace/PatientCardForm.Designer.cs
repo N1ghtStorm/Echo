@@ -220,7 +220,6 @@
             // 
             // comboDay
             // 
-            this.comboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDay.FormattingEnabled = true;
             this.comboDay.ItemHeight = 13;
             this.comboDay.Location = new System.Drawing.Point(136, 202);
