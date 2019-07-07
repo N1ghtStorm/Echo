@@ -61,9 +61,10 @@
             // InsideFormPanel
             // 
             this.InsideFormPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.InsideFormPanel.Location = new System.Drawing.Point(154, 30);
+            this.InsideFormPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.InsideFormPanel.Location = new System.Drawing.Point(162, 30);
             this.InsideFormPanel.Name = "InsideFormPanel";
-            this.InsideFormPanel.Size = new System.Drawing.Size(770, 522);
+            this.InsideFormPanel.Size = new System.Drawing.Size(753, 512);
             this.InsideFormPanel.TabIndex = 1;
             // 
             // PatientButton
@@ -80,7 +81,7 @@
             // DoctorButton
             // 
             this.DoctorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DoctorButton.Location = new System.Drawing.Point(2, 30);
+            this.DoctorButton.Location = new System.Drawing.Point(2, 38);
             this.DoctorButton.Name = "DoctorButton";
             this.DoctorButton.Size = new System.Drawing.Size(154, 109);
             this.DoctorButton.TabIndex = 3;

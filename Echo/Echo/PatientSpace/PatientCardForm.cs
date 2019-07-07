@@ -16,6 +16,9 @@ namespace Echo
         private CalculateAge calculateAge;
         private ReturnAgePhrase returnAgePharse;
         private String phrase;
+        private Patient mainPatient;
+        private bool isFemale;  
+  
 
         // Заполняем дни в месяцах
         private int[][] daysMounths = new int[][]
@@ -51,10 +54,15 @@ namespace Echo
                 comboMounth.Items.Add(mounths[i]);
             }
 
+            comboGender.Items.Add("Женский");
+            comboGender.Items.Add("Мужской");
+            //comboGender.DropDownStyle = DropDownList;
+
             calculateAge = new CalculateAge();
             returnAgePharse = new ReturnAgePhrase();
 
-            comboDay.Text = "1";
+            
+            //comboDay.Text = "1";
             comboMounth.SelectedIndex = 0;
             comboDay.SelectedIndex = 0;
             numericBirthYear.Value = 1980;       
@@ -87,13 +95,21 @@ namespace Echo
                 comboDay.Text = mounthLength.ToString();
             }
 
-            comboDay.Items.Clear();
+           // comboDay.Items.Clear();
 
             for (int i = 0; i < mounthLength; i++)
             {
                 comboDay.Items.Add(i + 1);
             }
-            comboDay.SelectedIndex = Convert.ToInt32(comboDay.Text) - 1;
+
+            try
+            {
+               // comboDay.SelectedIndex = Convert.ToInt32(comboDay.Text) - 1;
+            }
+            catch(Exception exep)
+            {
+
+            }
 
             var ageSpan = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
             returnAgePharse.ReturnPhrase(labelAge, ageSpan, comboDay.SelectedIndex, comboMounth.SelectedIndex, numericBirthYear.Value);
@@ -102,6 +118,24 @@ namespace Echo
         // Смена дня
         private void comboDay_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int index = comboMounth.SelectedIndex;
+            int mounthLength = daysMounths[index].Length;
+            /*
+            for (int i = 0; i < mounthLength; i++)
+            {
+                if (Convert.ToInt32(comboDay.Text) != i + 1)
+                {
+                    comboDay.Text = "1";
+                    comboDay.SelectedIndex = 0;
+                }
+            } */
+            bool found = daysMounths[index].Contains(Convert.ToInt32(comboDay.Text));
+            if (!found)
+            {
+                comboDay.Text = "1";
+                comboDay.SelectedIndex = 0;
+            }
+
             var ageSpan = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
             returnAgePharse.ReturnPhrase(labelAge, ageSpan, comboDay.SelectedIndex, comboMounth.SelectedIndex, numericBirthYear.Value);
         }
@@ -111,6 +145,11 @@ namespace Echo
         {
             var ageSpan = calculateAge.GetAge(comboDay.SelectedIndex + 1, comboMounth.SelectedIndex + 1, (int)numericBirthYear.Value);
             returnAgePharse.ReturnPhrase(labelAge, ageSpan, comboDay.SelectedIndex, comboMounth.SelectedIndex, numericBirthYear.Value);
+        }
+
+        private void comboGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

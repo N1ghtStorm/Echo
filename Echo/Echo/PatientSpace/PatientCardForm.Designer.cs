@@ -48,15 +48,19 @@
             this.labelDay = new System.Windows.Forms.Label();
             this.labelMounth = new System.Windows.Forms.Label();
             this.labelYear = new System.Windows.Forms.Label();
-            this.styleButton1 = new Echo.StyleButton();
+            this.Accept = new Echo.StyleButton();
             this.labelAge = new System.Windows.Forms.Label();
+            this.comboGender = new System.Windows.Forms.ComboBox();
+            this.labelGender = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericBirthYear)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameTextBox
             // 
             this.NameTextBox.BackColor = System.Drawing.Color.White;
-            this.NameTextBox.Location = new System.Drawing.Point(126, 79);
+            this.NameTextBox.Location = new System.Drawing.Point(147, 15);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.NameTextBox.Size = new System.Drawing.Size(110, 20);
@@ -65,7 +69,7 @@
             // SecondNameTextBox
             // 
             this.SecondNameTextBox.BackColor = System.Drawing.Color.White;
-            this.SecondNameTextBox.Location = new System.Drawing.Point(126, 119);
+            this.SecondNameTextBox.Location = new System.Drawing.Point(147, 55);
             this.SecondNameTextBox.Name = "SecondNameTextBox";
             this.SecondNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SecondNameTextBox.Size = new System.Drawing.Size(110, 20);
@@ -74,7 +78,7 @@
             // FatherNameTextBox
             // 
             this.FatherNameTextBox.BackColor = System.Drawing.Color.White;
-            this.FatherNameTextBox.Location = new System.Drawing.Point(126, 161);
+            this.FatherNameTextBox.Location = new System.Drawing.Point(147, 96);
             this.FatherNameTextBox.Name = "FatherNameTextBox";
             this.FatherNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.FatherNameTextBox.Size = new System.Drawing.Size(110, 20);
@@ -84,7 +88,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelName.Location = new System.Drawing.Point(40, 82);
+            this.labelName.Location = new System.Drawing.Point(3, 22);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(80, 13);
             this.labelName.TabIndex = 3;
@@ -94,7 +98,7 @@
             // 
             this.labelSecondNmae.AutoSize = true;
             this.labelSecondNmae.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSecondNmae.Location = new System.Drawing.Point(61, 122);
+            this.labelSecondNmae.Location = new System.Drawing.Point(6, 55);
             this.labelSecondNmae.Name = "labelSecondNmae";
             this.labelSecondNmae.Size = new System.Drawing.Size(56, 13);
             this.labelSecondNmae.TabIndex = 4;
@@ -104,7 +108,7 @@
             // 
             this.labelFatherName.AutoSize = true;
             this.labelFatherName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFatherName.Location = new System.Drawing.Point(61, 164);
+            this.labelFatherName.Location = new System.Drawing.Point(8, 96);
             this.labelFatherName.Name = "labelFatherName";
             this.labelFatherName.Size = new System.Drawing.Size(54, 13);
             this.labelFatherName.TabIndex = 5;
@@ -147,7 +151,7 @@
             // 
             this.labelGrowth.AutoSize = true;
             this.labelGrowth.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelGrowth.Location = new System.Drawing.Point(40, 243);
+            this.labelGrowth.Location = new System.Drawing.Point(23, 274);
             this.labelGrowth.Name = "labelGrowth";
             this.labelGrowth.Size = new System.Drawing.Size(58, 13);
             this.labelGrowth.TabIndex = 10;
@@ -156,7 +160,7 @@
             // GrowthTextBox
             // 
             this.GrowthTextBox.BackColor = System.Drawing.Color.White;
-            this.GrowthTextBox.Location = new System.Drawing.Point(136, 243);
+            this.GrowthTextBox.Location = new System.Drawing.Point(136, 274);
             this.GrowthTextBox.Name = "GrowthTextBox";
             this.GrowthTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.GrowthTextBox.Size = new System.Drawing.Size(51, 20);
@@ -166,7 +170,7 @@
             // 
             this.labelMass.AutoSize = true;
             this.labelMass.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelMass.Location = new System.Drawing.Point(34, 281);
+            this.labelMass.Location = new System.Drawing.Point(23, 322);
             this.labelMass.Name = "labelMass";
             this.labelMass.Size = new System.Drawing.Size(64, 13);
             this.labelMass.TabIndex = 12;
@@ -175,7 +179,7 @@
             // MassTextBox
             // 
             this.MassTextBox.BackColor = System.Drawing.Color.White;
-            this.MassTextBox.Location = new System.Drawing.Point(136, 281);
+            this.MassTextBox.Location = new System.Drawing.Point(136, 315);
             this.MassTextBox.Name = "MassTextBox";
             this.MassTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.MassTextBox.Size = new System.Drawing.Size(51, 20);
@@ -185,7 +189,7 @@
             // 
             this.labelRhythm.AutoSize = true;
             this.labelRhythm.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelRhythm.Location = new System.Drawing.Point(32, 323);
+            this.labelRhythm.Location = new System.Drawing.Point(23, 361);
             this.labelRhythm.Name = "labelRhythm";
             this.labelRhythm.Size = new System.Drawing.Size(85, 13);
             this.labelRhythm.TabIndex = 14;
@@ -194,7 +198,7 @@
             // RhythmTextBox
             // 
             this.RhythmTextBox.BackColor = System.Drawing.Color.White;
-            this.RhythmTextBox.Location = new System.Drawing.Point(136, 316);
+            this.RhythmTextBox.Location = new System.Drawing.Point(136, 358);
             this.RhythmTextBox.Name = "RhythmTextBox";
             this.RhythmTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RhythmTextBox.Size = new System.Drawing.Size(51, 20);
@@ -205,9 +209,9 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(126)))), ((int)(((byte)(127)))));
             this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.Location = new System.Drawing.Point(43, 26);
+            this.BackButton.Location = new System.Drawing.Point(12, 405);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(93, 29);
+            this.BackButton.Size = new System.Drawing.Size(121, 43);
             this.BackButton.TabIndex = 16;
             this.BackButton.TabStop = false;
             this.BackButton.Text = "Назад";
@@ -216,6 +220,7 @@
             // 
             // comboDay
             // 
+            this.comboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDay.FormattingEnabled = true;
             this.comboDay.ItemHeight = 13;
             this.comboDay.Location = new System.Drawing.Point(136, 202);
@@ -226,6 +231,7 @@
             // 
             // comboMounth
             // 
+            this.comboMounth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMounth.FormattingEnabled = true;
             this.comboMounth.Location = new System.Drawing.Point(233, 202);
             this.comboMounth.Name = "comboMounth";
@@ -263,18 +269,18 @@
             this.labelYear.TabIndex = 21;
             this.labelYear.Text = "Год";
             // 
-            // styleButton1
+            // Accept
             // 
-            this.styleButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(126)))), ((int)(((byte)(127)))));
-            this.styleButton1.FlatAppearance.BorderSize = 0;
-            this.styleButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.styleButton1.Location = new System.Drawing.Point(425, 405);
-            this.styleButton1.Name = "styleButton1";
-            this.styleButton1.Size = new System.Drawing.Size(153, 43);
-            this.styleButton1.TabIndex = 22;
-            this.styleButton1.TabStop = false;
-            this.styleButton1.Text = "styleButton1";
-            this.styleButton1.UseVisualStyleBackColor = false;
+            this.Accept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(126)))), ((int)(((byte)(127)))));
+            this.Accept.FlatAppearance.BorderSize = 0;
+            this.Accept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Accept.Location = new System.Drawing.Point(456, 405);
+            this.Accept.Name = "Accept";
+            this.Accept.Size = new System.Drawing.Size(140, 43);
+            this.Accept.TabIndex = 22;
+            this.Accept.TabStop = false;
+            this.Accept.Text = "Применить";
+            this.Accept.UseVisualStyleBackColor = false;
             // 
             // labelAge
             // 
@@ -285,14 +291,54 @@
             this.labelAge.Size = new System.Drawing.Size(0, 13);
             this.labelAge.TabIndex = 23;
             // 
+            // comboGender
+            // 
+            this.comboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGender.FormattingEnabled = true;
+            this.comboGender.ItemHeight = 13;
+            this.comboGender.Location = new System.Drawing.Point(136, 238);
+            this.comboGender.Name = "comboGender";
+            this.comboGender.Size = new System.Drawing.Size(100, 21);
+            this.comboGender.TabIndex = 24;
+            this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
+            // 
+            // labelGender
+            // 
+            this.labelGender.AutoSize = true;
+            this.labelGender.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelGender.Location = new System.Drawing.Point(40, 241);
+            this.labelGender.Name = "labelGender";
+            this.labelGender.Size = new System.Drawing.Size(27, 13);
+            this.labelGender.TabIndex = 25;
+            this.labelGender.Text = "Пол";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.NameTextBox);
+            this.groupBox1.Controls.Add(this.labelName);
+            this.groupBox1.Controls.Add(this.SecondNameTextBox);
+            this.groupBox1.Controls.Add(this.labelSecondNmae);
+            this.groupBox1.Controls.Add(this.labelFatherName);
+            this.groupBox1.Controls.Add(this.FatherNameTextBox);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(284, 129);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ф.И.О.";
+            // 
             // PatientCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(103)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(608, 482);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.labelGender);
+            this.Controls.Add(this.comboGender);
             this.Controls.Add(this.labelAge);
-            this.Controls.Add(this.styleButton1);
+            this.Controls.Add(this.Accept);
             this.Controls.Add(this.labelYear);
             this.Controls.Add(this.labelMounth);
             this.Controls.Add(this.labelDay);
@@ -307,17 +353,13 @@
             this.Controls.Add(this.labelGrowth);
             this.Controls.Add(this.labelBirthDate);
             this.Controls.Add(this.numericBirthYear);
-            this.Controls.Add(this.labelFatherName);
-            this.Controls.Add(this.labelSecondNmae);
-            this.Controls.Add(this.labelName);
-            this.Controls.Add(this.FatherNameTextBox);
-            this.Controls.Add(this.SecondNameTextBox);
-            this.Controls.Add(this.NameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatientCardForm";
             this.Text = "PatientCardForm";
             this.Load += new System.EventHandler(this.PatientCardForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericBirthYear)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +387,10 @@
         private System.Windows.Forms.Label labelDay;
         private System.Windows.Forms.Label labelMounth;
         private System.Windows.Forms.Label labelYear;
-        private StyleButton styleButton1;
+        private StyleButton Accept;
         private System.Windows.Forms.Label labelAge;
+        private System.Windows.Forms.ComboBox comboGender;
+        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

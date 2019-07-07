@@ -21,6 +21,7 @@ namespace Echo
         private Color pressedButtonColor;
 
         public Form InsideForm { get; set; }
+        public Patient Patient { get; set; }
 
         public MainForm()
         {
@@ -28,10 +29,12 @@ namespace Echo
 
             readyButtonColor = Color.FromArgb(115, 126, 127);
             pressedButtonColor = Color.FromArgb(0, 122, 199);
+            Patient = new Patient();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            MainFormHeaderPanel.Width = this.Width;
             MainFormCloseButton.TabStop = false;
             MainFormCloseButton.FlatStyle = FlatStyle.Flat;
             MainFormCloseButton.FlatAppearance.BorderSize = 0;

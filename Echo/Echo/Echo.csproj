@@ -51,6 +51,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataModel\CalculateAge.cs" />
+    <Compile Include="DataModel\IShowOnPanel.cs" />
     <Compile Include="DataModel\ReturnAgePhrase.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="DoctorCardForm.cs">
