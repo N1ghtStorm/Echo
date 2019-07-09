@@ -96,6 +96,7 @@ namespace Echo
             }
 
             comboDay.Items.Clear();
+            //comboDay.MaxLength = mounthLength;
 
             for (int i = 0; i < mounthLength; i++)
             {
@@ -149,6 +150,14 @@ namespace Echo
 
         private void comboGender_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboGender.SelectedIndex == 0)
+            {
+                isFemale = true;
+            }
+            else
+            {
+                isFemale = false;
+            }
 
         }
     }
