@@ -42,7 +42,7 @@
             this.MainFormHeaderPanel.Controls.Add(this.MainFormCloseButton);
             this.MainFormHeaderPanel.Location = new System.Drawing.Point(2, 2);
             this.MainFormHeaderPanel.Name = "MainFormHeaderPanel";
-            this.MainFormHeaderPanel.Size = new System.Drawing.Size(925, 30);
+            this.MainFormHeaderPanel.Size = new System.Drawing.Size(1289, 30);
             this.MainFormHeaderPanel.TabIndex = 0;
             this.MainFormHeaderPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainFormHeaderPanel_MouseDown);
             this.MainFormHeaderPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainFormHeaderPanel_MouseMove);
@@ -50,7 +50,7 @@
             // MainFormCloseButton
             // 
             this.MainFormCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainFormCloseButton.Location = new System.Drawing.Point(897, 3);
+            this.MainFormCloseButton.Location = new System.Drawing.Point(1261, 2);
             this.MainFormCloseButton.Name = "MainFormCloseButton";
             this.MainFormCloseButton.Size = new System.Drawing.Size(25, 25);
             this.MainFormCloseButton.TabIndex = 0;
@@ -64,13 +64,13 @@
             this.InsideFormPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InsideFormPanel.Location = new System.Drawing.Point(162, 30);
             this.InsideFormPanel.Name = "InsideFormPanel";
-            this.InsideFormPanel.Size = new System.Drawing.Size(753, 512);
+            this.InsideFormPanel.Size = new System.Drawing.Size(1129, 609);
             this.InsideFormPanel.TabIndex = 1;
             // 
             // PatientButton
             // 
             this.PatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PatientButton.Location = new System.Drawing.Point(2, 145);
+            this.PatientButton.Location = new System.Drawing.Point(2, 153);
             this.PatientButton.Name = "PatientButton";
             this.PatientButton.Size = new System.Drawing.Size(154, 109);
             this.PatientButton.TabIndex = 2;
@@ -93,8 +93,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(103)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(927, 554);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1303, 651);
             this.Controls.Add(this.DoctorButton);
             this.Controls.Add(this.PatientButton);
             this.Controls.Add(this.InsideFormPanel);

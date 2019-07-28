@@ -38,11 +38,20 @@ namespace Echo
         public float LeftVenFinalSistSize { get; set; }
         //public float LeftVenFunc2D { get; set; }
 
-        // Конечное диастолическое давление:
-        public float LeftVenFinalDiasPresMaxSpeedFast { get; set; }
-        public float LeftVenFinalDiasPresMaxSpeedArte { get; set; }
-        public float LeftVenFinalDiasPresDurationFast { get; set; }
-        public float LeftVenFinalDiasPresDurationArte { get; set; }
+        // Сократительная функция лж:
+        //========================================================================================
+        //Формула одной плоскости
+        //========================================================================================
+        //Формула двух плоскостей
+        //========================================================================================
+        //Формула Симпсона
+
+
+        // Конечное диастолическое давление: (НЕ нужно!!!!)
+        //public float LeftVenFinalDiasPresMaxSpeedFast { get; set; }
+        //public float LeftVenFinalDiasPresMaxSpeedArte { get; set; }
+        //public float LeftVenFinalDiasPresDurationFast { get; set; }
+        //public float LeftVenFinalDiasPresDurationArte { get; set; }
 
         // Масса Миокарда: Масса Миокарда по формуле площадь-длина:
         public float LeftVenMiocMassLongHalfAxis { get; set; }
@@ -83,10 +92,10 @@ namespace Echo
         
         public float LeftVenBackWallDiastThick { get; set; }
         public float LeftVenBackWallSistThick { get; set; }
-        public float LeftVenBackWallSistExcurt { get; set; }
-        public float LeftVenBackWallMaxContractionSpeed { get; set; }
-        public float LeftVenBackWallMaxRelaxSpeed { get; set; }
-        public float LeftVenBackWallContractionPeriod { get; set; }
+        //public float LeftVenBackWallSistExcurt { get; set; } //НЕ НУЖНО
+        //public float LeftVenBackWallMaxContractionSpeed { get; set; } //НЕ НУЖНО
+        //public float LeftVenBackWallMaxRelaxSpeed { get; set; } //НЕ НУЖНО
+        //public float LeftVenBackWallContractionPeriod { get; set; } //НЕ НУЖНО
 
         public string LeftVenBackWallSpecifics { get; set; }
         
@@ -96,7 +105,7 @@ namespace Echo
 
         public float InterVenSeptumDiastThick { get; set; }
         public float InterVenSeptumSistThick { get; set; }
-        public float InterVenSeptumExcurtIntoSiast { get; set; }
+        // public float InterVenSeptumExcurtIntoSiast { get; set; } //НЕ НУЖНО
 
         public string InterVenSeptumSpecifics { get; set; }
 
@@ -105,7 +114,7 @@ namespace Echo
         // Правый Желудочек (Right Ventricle)
 
         public float RightVenFinalDiasSize { get; set; }
-        public float RightVenFinalSiastSize { get; set; }
+        //public float RightVenFinalSiastSize { get; set; } //НЕ НУЖНО
 
         public string RightVenSpecifics { get; set; }
 
@@ -114,8 +123,8 @@ namespace Echo
         // Левое предсердие (Left Auricle)
 
         public float LeftAuricSistSize { get; set; }
-        public float LeftAuricArterialPressToSist { get; set; }
-        public float LeftAuricSistGradient { get; set; }
+        //public float LeftAuricArterialPressToSist { get; set; }
+        //public float LeftAuricSistGradient { get; set; }
 
         public string LeftAuricSpecifics { get; set; }
 

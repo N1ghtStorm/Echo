@@ -40,7 +40,6 @@ S:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.pdb
 J:\Code_projects\Echo_project\Echo\Echo\bin\Debug\Echo.exe.config
 J:\Code_projects\Echo_project\Echo\Echo\bin\Debug\Echo.exe
 J:\Code_projects\Echo_project\Echo\Echo\bin\Debug\Echo.pdb
-J:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.csprojAssemblyReference.cache
 J:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorCardForm.resources
 J:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.DoctorWayDialogForm.resources
 J:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.MainForm.resources
