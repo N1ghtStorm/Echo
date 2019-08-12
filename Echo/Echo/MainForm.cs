@@ -30,15 +30,14 @@ namespace Echo
             readyButtonColor = Color.FromArgb(115, 126, 127);
             pressedButtonColor = Color.FromArgb(0, 122, 199);
             Patient = new Patient();
+
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MainFormHeaderPanel.Width = this.Width;
-            MainFormCloseButton.TabStop = false;
-            MainFormCloseButton.FlatStyle = FlatStyle.Flat;
-            MainFormCloseButton.FlatAppearance.BorderSize = 0;
-            MainFormHeaderPanel.Location = new Point(0, 0);
 
             buttons[0] = DoctorButton;
             buttons[1] = PatientButton;
@@ -136,11 +135,10 @@ namespace Echo
 
         }
 
-        private void MainFormCloseButton_Paint(object sender, PaintEventArgs e)
+
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            Pen pen = new Pen(Color.White);
-            e.Graphics.DrawLine(pen, 5, 5, MainFormCloseButton.Width - 5, MainFormCloseButton.Height - 5);
-            e.Graphics.DrawLine(pen, MainFormCloseButton.Width - 5, 5, 5, MainFormCloseButton.Height - 5);
+            Application.Exit();
         }
     }
 }
