@@ -29,11 +29,10 @@ namespace Echo
         public int ExilePeriod { get; set; } //Период изгнания
 
         // Полости Сердца:
+        #region Левый Желудочек
         //========================================================================================
         //========================================================================================
-
         // Левый Желудочек(Left Ventricle):
-
         public float LeftVenFinalDiasSize { get; set; }
         public float LeftVenFinalSistSize { get; set; }
         //public float LeftVenFunc2D { get; set; }
@@ -98,9 +97,10 @@ namespace Echo
         //public float LeftVenBackWallContractionPeriod { get; set; } //НЕ НУЖНО
 
         public string LeftVenBackWallSpecifics { get; set; }
-        
-        //========================================================================================
 
+        //========================================================================================
+        #endregion
+        #region Остальные полости сердца
         // Межжелудочковая перегородка:
 
         public float InterVenSeptumDiastThick { get; set; }
@@ -145,7 +145,7 @@ namespace Echo
 
         //============================================================================================
         //============================================================================================
-
+        #endregion
 
 
         public double BodyArea()

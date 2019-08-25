@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using Echo.DataModel;
 
 namespace Echo
@@ -17,7 +18,7 @@ namespace Echo
         private ReturnAgePhrase returnAgePharse;
         private String phrase;
         private Patient mainPatient;
-        private bool isFemale;  
+        private bool isFemale;
   
 
         // Заполняем дни в месяцах
@@ -45,6 +46,7 @@ namespace Echo
         public PatientCardForm()
         {
             InitializeComponent();
+            mainPatient = (this.Owner as MainForm).Patient;
         }
 
         private void PatientCardForm_Load(object sender, EventArgs e)
@@ -159,6 +161,11 @@ namespace Echo
                 isFemale = false;
             }
 
+        }
+
+        private void Accept_Click(object sender, EventArgs e)
+        {
+            XmlSerializer writer = new XmlSerializer(typeof(Patient));
         }
     }
 }

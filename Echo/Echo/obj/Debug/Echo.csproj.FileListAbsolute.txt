@@ -66,3 +66,4 @@ C:\Projects\Echo\Echo\Echo\Echo\obj\Debug\Echo.csproj.GenerateResource.cache
 C:\Projects\Echo\Echo\Echo\Echo\obj\Debug\Echo.csproj.CoreCompileInputs.cache
 C:\Projects\Echo\Echo\Echo\Echo\obj\Debug\Echo.exe
 C:\Projects\Echo\Echo\Echo\Echo\obj\Debug\Echo.pdb
+J:\Code_projects\Echo_project\Echo\Echo\obj\Debug\Echo.csprojAssemblyReference.cache

@@ -280,6 +280,7 @@
             this.Accept.TabStop = false;
             this.Accept.Text = "Применить";
             this.Accept.UseVisualStyleBackColor = false;
+            this.Accept.Click += new System.EventHandler(this.Accept_Click);
             // 
             // labelAge
             // 
